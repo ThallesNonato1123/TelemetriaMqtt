@@ -61,21 +61,21 @@ void loop() {
   if (!mqttClient.connected()) reconnect();
   mqttClient.loop();
 
-  // Recebe do Nano
-  while (Serial2.available()) {
-    String msg = Serial2.readStringUntil('\n');
-    msg.trim();
-
-    int sepIndex = msg.indexOf(':');
-    if (sepIndex > 0) {
-      String key = msg.substring(0, sepIndex);
-      double value = msg.substring(sepIndex + 1).toDouble();
-
-      if (key == "battery") battery = value;
-      else if (key == "temp") temp = value;
-      else if (key == "rpm") rpm = value;
-    }
-  }
+//  // Recebe do Nano
+//  while (Serial2.available()) {
+//    String msg = Serial2.readStringUntil('\n');
+//    msg.trim();
+//
+//    int sepIndex = msg.indexOf(':');
+//    if (sepIndex > 0) {
+//      String key = msg.substring(0, sepIndex);
+//      double value = msg.substring(sepIndex + 1).toDouble();
+//
+//      if (key == "battery") battery = value;
+//      else if (key == "temp") temp = value;
+//      else if (key == "rpm") rpm = value;
+//    }
+//  }
 
   // Publica JSON a cada 500ms
   long now = millis();
@@ -83,9 +83,10 @@ void loop() {
     previous_time = now;
 
     String json = "{";
-    json += "\"battery\":" + String(battery,2) + ",";
-    json += "\"temp\":" + String(temp,2) + ",";
-    json += "\"rpm\":" + String(rpm,0);
+    json += "\"timestamp\":" + String(now) + ",";
+    json += "\"battery\":" + String(2) + ",";
+    json += "\"engineTemp\":" + String(3) + ",";
+    json += "\"engineRpm\":" + String(4);
     json += "}";
 
     mqttClient.publish(topic_can, json.c_str());
