@@ -26,7 +26,7 @@ void setup() {
     while (1);
   }
 
-  CAN.setMode(MCP_NORMAL); // modo normal de recepção
+  CAN.setMode(MCP_NORMAL); 
   Serial.println("Aguardando mensagens do PDM...");
 }
 
@@ -38,17 +38,22 @@ void loop() {
 
     CAN.readMsgBuf(&rxId, &len, buf);
 
-    if (len == 8) { // só processa mensagens de 8 bytes
       double value;
-      memcpy(&value, buf, sizeof(double)); // converte bytes para double
+      memcpy(&value, buf, sizeof(double)); 
 
       // Mapeamento de IDs
       switch (rxId) {
-        case 0x64: // Bateria
-          battery = value;
-          espSerial.println("battery:" + String(battery, 2));
-          Serial.println("Battery: " + String(battery, 2));
-          break;
+      case 0x64: {
+        uint32_t rpm_val = (uint32_t)buf[0] | ((uint32_t)buf[1] << 8) | ((uint32_t)buf[2] << 16) | ((uint32_t)buf[3] << 24);
+
+        float battery_val;
+        memcpy(&battery_val, &buf[4], sizeof(float));
+
+        Serial.println("RPM: " + String(rpm_val));  
+        Serial.println("Battery: " + String(battery_val, 2));
+        delay(1000);
+        break;
+      }
 
         case 0x65: // Temperatura
           temp = value;
@@ -63,15 +68,7 @@ void loop() {
           break;
 
         default:
-          // Ignorar IDs que não interessam
           break;
       }
     }
-  }
-
-  // Recebe mensagens do ESP32 (opcional)
-  if (espSerial.available()) {
-    String msgESP = espSerial.readStringUntil('\n');
-    Serial.println("ESP32: " + msgESP);
-  }
 }
