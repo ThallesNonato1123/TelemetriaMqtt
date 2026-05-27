@@ -64,11 +64,12 @@
 		% IMAGEM
 		\column{0.45\textwidth}
 		\centering
-		\includegraphics[height=5cm,keepaspectratio]{assets/ecu_atlas_client.png}
-		
-		\small Sistema de telemetria
-		
-		% TEXTO
+		\begin{figure}
+			\includegraphics[height=5cm,keepaspectratio]{assets/ecu_atlas_client.png}
+			\caption{Sistema de telemetria Fórmula 1}
+		\end{figure}
+
+
 		\column{0.55\textwidth}
 		
 		\begin{itemize}
@@ -84,107 +85,156 @@
 \end{frame}
 
 \begin{frame}[fragile]{Telemetria}
-	\begin{center}
+	\begin{figure}
+		\centering
 		\includegraphics[width=0.5\textwidth]{assets/F1-telemetria.jpg}
-	\end{center}
+		\caption{Software de aquisição de dados}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Formula SAE}
+	
+	\begin{columns}[c]
+		
+		% IMAGEM
+		\column{0.45\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1.0\textwidth]{assets/FSAEB2024.jpeg}
+			\caption{Competição Formula SAE Brasil 2024}
+		\end{figure}
+		
+		% TEXTO
+		\column{0.55\textwidth}
+		
+		\begin{itemize}
+			\item Competição estudantil de engenharia
+			\item Desenvolvimento de um protótipo monoposto estilo fórmula
+			\item Veículo projetado e construído por estudantes
+			\item Avaliação técnica e dinâmica
+			\item Foco em desempenho, custo e engenharia do projeto
+		\end{itemize}
+		
+	\end{columns}
+	
 \end{frame}
 
 \begin{frame}[fragile]{Equipe Icarus UFRJ de Formula SAE}
-To set a typical title page, you call some commands in the preamble:
-\begin{block}{The Commands for the Title Page}
-\begin{verbatim}
-\title{Sample Title}
-\subtitle{Sample subtitle}
-\author{First Author, Second Author}
-\date{\today} % Can also be (ab)used for conference name &c.
-\end{verbatim}
-\end{block}
-You can then write out the title page with \verb|\maketitle|.
-
-To set a \textbf{background image} use the \verb|\titlebackground| command 
-before \verb|\maketitle|; its only argument is the name (or path) of a graphic 
-file.
-
-If you use the \textbf{starred version} \verb|\titlebackground*|, the image 
-will be clipped to a split view on the right side of the title slide.
-
+	\begin{columns}[c]
+		
+		% IMAGEM
+		\column{0.45\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1.0\textwidth]{assets/icarus20252.jpeg}
+			\caption{Equipe Icarus 2025}
+		\end{figure}
+		
+		% TEXTO
+		\column{0.55\textwidth}
+		
+		\begin{itemize}
+			\item Equipe de Fórmula SAE à combustão da UFRJ, fundada em 2004
+			\item Formada por estudantes de graduação de diferentes áreas
+			\item Desenvolvimento anual de um protótipo do tipo fórmula
+			\item Participação em competições organizadas pela Society of Automotive Engineers (SAE)
+			\item Aplicação prática de conhecimentos teóricos adquiridos na graduação
+		\end{itemize}
+		
+	\end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Writing a Simple Slide}
-\framesubtitle{It's really easy!}
-\begin{itemize}[<+->]
-\item A typical slide has bulleted lists
-\item These can be uncovered in sequence
-\end{itemize}
-\begin{block}{Code for a Page with an Itemised List}<+->
-\begin{verbatim}
-\begin{frame}{Writing a Simple Slide}
-  \framesubtitle{It's really easy!}
-  \begin{itemize}[<+->]
-    \item A typical slide has bulleted lists
-    \item These can be uncovered in sequence
-  \end{itemize}\end{frame}
-\end{verbatim}
-\end{block}
+\begin{frame}[fragile]{Objetivos}
+	\begin{columns}[c]
+		
+		% IMAGEM
+		\column{0.45\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.6\textwidth]{assets/F25.jpeg}
+			\caption{Protótipo F-25}
+		\end{figure}
+		
+		% TEXTO
+		\column{0.55\textwidth}
+		
+		\begin{itemize}
+			\item Desenvolver um sistema de telemetria veicular de baixo custo e alta confiabilidade
+			\item Aplicar conceitos de Internet das Coisas (IoT) em ambiente automotivo
+			\item Permitir aquisição, processamento e transmissão de dados em tempo real
+			\item Possibilitar monitoramento remoto do desempenho do veículo
+			\item Integrar os sistemas embarcados utilizando comunicação baseada no protocolo CAN
+			\item Garantir escalabilidade e robustez para aplicação em veículos de competição
+		\end{itemize}
+		
+	\end{columns}
 \end{frame}
 
 \section{Revisão Teórica}
 
-\footlinecolor{sintefyellow}
-\begin{frame}[fragile]{Changing Slide Style}
-\begin{itemize}
-\item You can select the white or \textit{maincolor} \textbf{slide style} \emph{in the 
-preamble} with \verb|\themecolor{white}| (default) or \verb|\themecolor{main}|
-      \begin{itemize}
-      \item You should \emph{not} change these within the document: Beamer does 
-      not like it
-      \item If you \emph{really} must, you may have to add 
-      \verb|\usebeamercolor[fg]{normal text}| in the slide
-      \end{itemize}
-\item You can change the \textbf{footline colour} with 
-\verb|\footlinecolor{color}|
-      \begin{itemize}
-      \item Place the command \emph{before} a new \verb|frame|
-      \item There are four ``official'' colors: 
-      \testcolor{maincolor}, \testcolor{sintefyellow}, 
-      \testcolor{sintefgreen}, \testcolor{sintefdarkgreen}
-      \item Default is no footline; you can restore it with 
-      \verb|\footlinecolor{}|
-      \item Others may work, but no guarantees!
-      \item Should \emph{not} be used with the \verb|maincolor| theme!
-      \end{itemize}
+\begin{frame}[fragile]{Eletrônica Embarcada em Veículos}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.45\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.1\textwidth]{assets/automotive_diagram.png}
+		\caption{Protótipo F-25}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+	\item Veículos modernos utilizam sistemas eletrônicos e computacionais integrados
+	\item Funções antes mecânicas agora são controladas por sistemas embarcados
+	\item Sistemas distribuídos operam em tempo real para monitoramento e controle do veículo
+	\item Unidades de controle eletrônico (ECUs) processam dados de sensores
+	\item ECUs realizam tomada de decisão e acionamento de atuadores
 \end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Blocks}
-\begin{columns}
-\begin{column}{0.3\textwidth}
-\begin{block}{Standard Blocks}
-These have a color coordinated with the footline (and grey in the blue theme)
-\begin{verbatim}
-\begin{block}{title}
-content...
-\end{block}
-\end{verbatim}
-\end{block}
-\end{column}
-\begin{column}{0.7\textwidth}
-\begin{colorblock}[black]{sinteflightgreen}{Colour Blocks}
-Similar to the ones on the left, but you pick the colour. Text will be white by 
-default, but you may set it with an optional argument.
-\small
-\begin{verbatim}
-\begin{colorblock}[black]{sinteflightgreen}{title}
-content...
-\end{colorblock}
-\end{verbatim}
-\end{colorblock}
-The ``official'' colours of colour blocks are: \testcolor{sinteflilla}, 
-\testcolor{maincolor}, \testcolor{sintefdarkgreen}, and 
-\testcolor{sintefyellow}.
-\end{column}
+	
 \end{columns}
 \end{frame}
+
+
+\begin{frame}[fragile]{Sensores em Sistemas Embarcados}
+	
+	\begin{columns}[c]
+		
+		% TEXTO
+		\column{0.52\textwidth}
+		\begin{itemize}
+			\item Sensores convertem grandezas físicas em sinais elétricos
+			\item Dados são usados por ECUs para monitoramento e controle
+			\item Podem ter saída analógica ou digital
+			\item Sinais analógicos são digitalizados via ADC
+		\end{itemize}
+		
+		% FÓRMULAS
+		\column{0.48\textwidth}
+		
+		\textbf{Sensor analógico:}
+		\[
+		v_s = K_s \cdot q
+		\]
+		
+		\vspace{0.2cm}
+		\textbf{Resolução do ADC:}
+		\[
+		\Delta V = \frac{V_{ref}}{2^N}
+		\]
+		
+		\vspace{0.2cm}
+		\textbf{Saída digital:}
+		\[
+		D = \left\lfloor \frac{v_s}{V_{ref}} \cdot (2^N - 1) \right\rfloor
+		\]
+		
+	\end{columns}
+	
+\end{frame}
+
 
 \footlinecolor{}
 \begin{frame}[fragile]{Using Colours}
