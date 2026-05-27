@@ -6,7 +6,6 @@
 
 \usefonttheme[onlymath]{serif}
 
-\titlebackground*{assets/background}
 
 % adicionar o numero na lista final da apresentação
 \setbeamertemplate{bibliography item}{\insertbiblabel}
@@ -20,67 +19,77 @@
 \begin{document}
 \maketitle
 
-\begin{frame}
+\section{Introdução}
 
-This template is a based on \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation} from \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} and its derivation \hrefcol{https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes}{Beamer-LaTeX-Themes} from Liu Qilong and Andrea Gasparini
+\begin{frame}{Telemetria}
+	\begin{itemize}
+		
+		 \item O termo \textbf{telemetria} tem origem no grego:
+		\begin{itemize}
+			\item \textit{tele} = distante
+			\item \textit{metron} = medida
+		\end{itemize}
+		
+		\item Assim, telemetria significa literalmente ``medição à distância''.
+		
+		
+		\item A telemetria surgiu da necessidade de monitorar sistemas remotos ou de difícil acesso.
+		
+		
+		\item Seu principal objetivo é coletar dados de sensores e transmiti-los para uma estação de análise em tempo real.
+		
+		\item Historicamente, foi utilizada em aplicações aeroespaciais, militares e aeronáuticas, principalmente no monitoramento de foguetes, mísseis e aeronaves.
+		
 
-\vspace{\baselineskip}
-
-In the following you find a brief introduction on how to use \LaTeX\ and the beamer package to prepare slides, based on the one written by \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} for \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation}
-
-% This template is released under \hrefcol{https://creativecommons.org/licenses/by-nc/4.0/legalcode}{Creative Commons CC BY 4.0} license
-
+	\end{itemize}
 \end{frame}
 
-\section{Introduction}
+\begin{frame}{Telemetria no Automobilismo}
+	\begin{itemize}
+		\item A utilização da telemetria no automobilismo teve início nas categorias de alto desempenho, principalmente na Fórmula 1, durante as décadas de 1970 e 1980.
+		
+		\item Inicialmente, os sistemas eram utilizados apenas para aquisição de dados após testes e corridas, por meio de registradores embarcados (dataloggers).
 
-\begin{frame}{Beamer for SINTEF slides}
-\begin{itemize}
-\item We assume you can use \LaTeX; if you cannot,
-\hrefcol{http://en.wikibooks.org/wiki/LaTeX/}{you can learn it here}
-\item Beamer is one of the most popular and powerful document
-classes for presentations in \LaTeX
-\item Beamer has also a detailed
-\hrefcol{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{user
- manual}
-\item Here we will present only the most basic features to get you up to speed
-\end{itemize}
+		\item Na década de 1990, a transmissão de dados em tempo real entre o carro e os boxes tornou-se uma grande evolução tecnológica nas competições.
+		
+		\item A telemetria passou então a ser utilizada como ferramenta estratégica para análise de desempenho, ajustes na configuração do carro e diagnóstico de falhas durante as provas.
+	\end{itemize}
 \end{frame}
 
-\begin{frame}{Beamer vs. PowerPoint}
-Compared to PowerPoint, using \LaTeX\ is better because:
-\begin{itemize}
-\item It is not What-You-See-Is-What-You-Get, but
-What-You-\emph{Mean}-Is-What-You-Get:\\
-you write the content, the computer does the typesetting
-\item Produces a \texttt{pdf}: no problems with fonts, formulas,
-      program versions
-\item Easier to keep consistent style, fonts, highlighting, etc.
-\item Math typesetting in \TeX\ is the best:
-\begin{equation*}
-\mathrm{i}\,\hslash\frac{\partial}{\partial t} \Psi(\mathbf{r},t) =
--\frac{\hslash^2}{2\,m}\nabla^2\Psi(\mathbf{r},t)
-+ V(\mathbf{r})\Psi(\mathbf{r},t)
-\end{equation*}
 
-\end{itemize}
+\begin{frame}[fragile]{Telemetria}
+	
+	\begin{columns}[c]
+		
+		% IMAGEM
+		\column{0.45\textwidth}
+		\centering
+		\includegraphics[height=5cm,keepaspectratio]{assets/ecu_atlas_client.png}
+		
+		\small Sistema de telemetria
+		
+		% TEXTO
+		\column{0.55\textwidth}
+		
+		\begin{itemize}
+			\item Sensores capturam dados do carro
+			\item Dados são centralizados em um módulo principal (ECU)
+			\item Parte dos dados é transmitida em tempo real via rádio frequência (RF)
+			\item O sinal RF é enviado por antenas transmissoras e captado por antenas receptoras na equipe
+			\item O restante é armazenado para análise posterior
+		\end{itemize}
+		
+	\end{columns}
+	
 \end{frame}
 
-\begin{frame}[fragile]{Getting Started}
-\framesubtitle{Selecting the SINTEF Theme}
-To start working with \texttt{sintefbeamer}, start a \LaTeX\ document with the
-preamble:
-\begin{block}{Minimum SINTEF Beamer Document}
-\verb|\documentclass{beamer}|\\
-\verb|\usetheme{sintef}|\\
-\verb|\begin{document}|\\
-\verb|\begin{frame}{Hello, world!}|\\
-\verb|\end{frame}|\\
-\verb|\end{document}|\\
-\end{block}
+\begin{frame}[fragile]{Telemetria}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{assets/F1-telemetria.jpg}
+	\end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Title page}
+\begin{frame}[fragile]{Equipe Icarus UFRJ de Formula SAE}
 To set a typical title page, you call some commands in the preamble:
 \begin{block}{The Commands for the Title Page}
 \begin{verbatim}
@@ -119,7 +128,7 @@ will be clipped to a split view on the right side of the title slide.
 \end{block}
 \end{frame}
 
-\section{Personalization}
+\section{Revisão Teórica}
 
 \footlinecolor{sintefyellow}
 \begin{frame}[fragile]{Changing Slide Style}
@@ -322,7 +331,7 @@ them)}}
 \end{itemize}
 \end{frame}
 
-\section{Summary}
+\section{Desenvolvimento do Projeto}
 
 \begin{frame}
 \frametitle{Good Luck!}
@@ -341,7 +350,15 @@ them)}}
 \end{itemize}
 \end{frame}
 
-
+\section{Conclusão e Trabalhos Futuros}
+\begin{frame}
+	\frametitle{Good Luck!}
+	\begin{itemize}
+		\item Enough for an introduction! You should know enough by now
+		\item If you have corrections or suggestions,
+		\hrefcol{mailto:mattia.ippoliti@studenti.polito.it}{send them to me!}
+	\end{itemize}
+\end{frame}
 
 \section{Referências Bibliográficas} 
 \begin{frame}[allowframebreaks]

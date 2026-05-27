@@ -1421,6 +1421,9 @@ INPUT ./assets/background.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/google/carlito/Crlt-osf-ot1.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_zisnlb.enc
+INPUT ./beamerpolito.toc
+INPUT beamerpolito.toc
+INPUT beamerpolito.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -1456,9 +1459,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/huerta/caladea/Caladea-Regular-tlf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/huerta/caladea/Caladea-Italic-tlf-ot1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/huerta/caladea/Caladea-Italic-tlf-ot1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/huerta/caladea/Caladea-Italic-tlf-ot1.tfm
-INPUT ./beamerpolito.toc
-INPUT beamerpolito.toc
-INPUT beamerpolito.toc
 INPUT /usr/share/texlive/texmf-dist/tex/latex/carlito/TS1Crlt-OsF.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/carlito/TS1Crlt-OsF.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/carlito/TS1Crlt-OsF.fd
