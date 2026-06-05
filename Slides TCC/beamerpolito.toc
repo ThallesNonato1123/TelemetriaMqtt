@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Introdução}{2}{0}{1}
 \beamer@sectionintoc {2}{Revisão Teórica}{10}{0}{2}
-\beamer@sectionintoc {3}{Desenvolvimento do Projeto}{22}{0}{3}
-\beamer@sectionintoc {4}{Conclusão e Trabalhos Futuros}{25}{0}{4}
-\beamer@sectionintoc {5}{Referências Bibliográficas}{27}{0}{5}
+\beamer@sectionintoc {3}{Desenvolvimento do Projeto}{24}{0}{3}
+\beamer@sectionintoc {4}{Conclusão e Trabalhos Futuros}{36}{0}{4}
+\beamer@sectionintoc {5}{Referências Bibliográficas}{41}{0}{5}

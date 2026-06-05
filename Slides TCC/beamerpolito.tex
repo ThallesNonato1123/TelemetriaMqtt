@@ -11,7 +11,7 @@
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
 \newcommand{\hrefcol}[2]{\textcolor{cyan}{\href{#1}{#2}}}
-\title{Desenvolvimento de um sistema de telemetria para veículos Formula SAE}
+\title{Desenvolvimento de sistema de telemetria em veículos Fórmula SAE}
 \course{Trabalho de conclusão de curso}
 \author{Thalles Nonato Leal Santos}
 \IDnumber{\href{mailto:eusouthalles@ic.ufrj.br}{eusouthalles@ic.ufrj.br}, \href{mailto:tnonato@cos.ufrj.br}{tnonato@cos.ufrj.br}}
@@ -237,184 +237,551 @@
 
 
 \footlinecolor{}
-\begin{frame}[fragile]{Using Colours}
-\begin{itemize}[<alert@2>]
-  \item You can use colours with the
-        \verb|\textcolor{<color name>}{text}| command
-  \item The colours are defined in the \texttt{sintefcolor} package:
-  \begin{itemize}
-  \item Primary colours: \testcolor{maincolor} and its sidekick 
-  \testcolor{sintefgrey}
-  \item Three shades of green: \testcolor{sinteflightgreen}, 
-  \testcolor{sintefgreen}, \testcolor{sintefdarkgreen}
-  \item Additional colours: \testcolor{sintefyellow}, \testcolor{sintefred}, 
-        \testcolor{sinteflilla}
-        \begin{itemize}
-        \item These may be shaded---see the \verb|sintefcolor| documentation or 
-        the \hrefcol{https://sintef.sharepoint.com/sites/stottetjenester/%
-        kommunikasjon/grafisk-profil-new/Sider/default.aspx}{SINTEF profile 
-        manual}
-        \end{itemize}
-  \end{itemize}
-  \item Do \emph{not} abuse colours: \verb|\emph{}| is usually enough
-  \item Use \verb|\alert{}| to bring the \alert<2->{focus} somewhere
-  \item<2- | alert@2> If you highlight too much, you don't highlight at all!
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Adding images}
-\begin{columns}
-\begin{column}{0.7\textwidth}
-Adding images works like in normal \LaTeX:
-\begin{block}{Code for Adding Images}
-\begin{verbatim}
-\usepackage{graphicx}
-% ...
-\includegraphics[width=\textwidth]
-{assets/logo_RGB}
-\end{verbatim}
-\end{block}
-\end{column}
-\begin{column}{0.3\textwidth}
-\includegraphics[width=\textwidth]
-{assets/logo_RGB}
-\end{column}
+\begin{frame}[fragile]{ECU}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.1\textwidth]{assets/ecu.jpg}
+		\caption{ECU}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item Recebe sinais dos sensores do veículo
+		\item Realiza condicionamento e conversão dos sinais (ADC)
+		\item Processa dados por meio de algoritmos de controle
+		\item Determina ações com base em mapas e calibrações
+		\item Aciona atuadores por sinais digitais, PWM ou analógicos
+		\item Comunica-se com outros módulos pela rede veicular
+	\end{itemize}
 \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Splitting in Columns}
-Splitting the page is easy and common;
-typically, one side has a picture and the other text:
-\begin{columns}
-\begin{column}{0.6\textwidth}
-This is the first column
-\end{column}
-\begin{column}{0.3\textwidth}
-And this the second
-\end{column}
+
+\begin{frame}[fragile]{Redes de comunicação veicular}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.3\textwidth]{assets/comunicacao-veicular.png}
+		\caption{Comunicação veicular}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item ECUs precisam compartilhar informações entre si
+		\item Redes automotivas permitem comunicação em tempo real
+		\item Reduzem o cabeamento ponto a ponto do veículo
+		\item Integram sistemas como motor, freios e transmissão
+		\item CAN é o protocolo mais utilizado na indústria automotiva
+	\end{itemize}
 \end{columns}
-\begin{block}{Column Code}
-\begin{verbatim}
-\begin{columns}
-    \begin{column}{0.6\textwidth}
-        This is the first column
-    \end{column}
-    \begin{column}{0.3\textwidth}
-        And this the second
-    \end{column}
-    % There could be more!
+\end{frame}
+
+\begin{frame}[fragile]{Redes de comunicação veicular}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.4\textwidth]{assets/canlogo.png}
+		\caption{CAN Network}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item Protocolo desenvolvido pela Bosch
+		\item Padronizado pela ISO 11898
+		\item Utiliza um barramento compartilhado
+		\item Comunicação confiável e determinística
+		\item Amplamente utilizado em sistemas automotivos
+	\end{itemize}
 \end{columns}
-\end{verbatim}
-\end{block}
 \end{frame}
 
-\begin{chapter}[assets/background_negative]{}{Special Slides}
-\begin{itemize}
-\item Chapter slides
-\item Side-picture slides
-\end{itemize}
-\end{chapter}
-
-\footlinecolor{sintefred}
-\begin{frame}[fragile]{Chapter slides}
-\begin{itemize}
-\item Similar to \verb|frame|s, but with a few more options
-\item Opened with \verb|\begin{chapter}[<image>]{<color>}{<title>}|
-\item Image is optional, colour and title are mandatory
-\item There are seven ``official'' colours: \testcolor{maincolor}, 
-\testcolor{sintefdarkgreen}, \testcolor{sintefgreen}, 
-\testcolor{sinteflightgreen}, \testcolor{sintefred}, \testcolor{sintefyellow}, 
-\testcolor{sinteflilla}.
-      \begin{itemize}
-      \item Strangely enough, these are \emph{more} than the official colours 
-      for the footline.
-      \item It may still be a nice touch to change the footline of following 
-      slides to the same color of a chapter slide. Your choice.
-      \end{itemize}
-\item Otherwise, \verb|chapter| behaves just like \verb|frame|.
-\end{itemize}
+\begin{frame}[fragile]{Redes de comunicação veicular}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.4\textwidth]{assets/interface-can-bus.png}
+		\caption{ECU}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item Utiliza duas linhas: CAN-H e CAN-L
+		\item Comunicação baseada em sinal diferencial
+		\item Maior imunidade a ruídos eletromagnéticos
+		\item Estados lógicos:
+			\begin{itemize}
+				\item Dominante (0)
+				\item Recessivo (1)
+			\end{itemize}
+	\end{itemize}
+\end{columns}
 \end{frame}
 
-\begin{sidepic}{assets/background}{Side-Picture Slides}
-\begin{itemize}
-\item Opened with \texttt{$\backslash$begin\{sidepic\}\{<image>\}\{<title>\}}
-\item Otherwise, \texttt{sidepic} works just like \texttt{frame}
-\end{itemize}
-\end{sidepic}
-
-\footlinecolor{}
-\begin{frame}
-\frametitle{Fonts}
-\begin{itemize}
-\item The paramount task of fonts is being readable
-\item There are good ones...
-  \begin{itemize}
-  \item {\textrm{Use serif fonts only with high-definition projectors}}
-  \item {\textsf{Use sans-serif fonts otherwise (or if you simply prefer 
-them)}}
-  \end{itemize}
-\item ... and not so good ones:
-  \begin{itemize}
-  \item {\texttt{Never use monospace for normal text}}
-  \item {\frakfamily Gothic, calligraphic or weird fonts: should always: be
-  avoided}
-\end{itemize}
-\end{itemize}
+\begin{frame}[fragile]{Redes de comunicação veicular}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.3\textwidth]{assets/can-data-frame.png}
+		\caption{CAN Data Frame}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item Mensagens transmitidas em quadros (frames)
+		\item Identificador define prioridade da mensagem
+		\item Campo de dados transporta as informações
+		\item CRC e ACK garantem confiabilidade
+	\end{itemize}
+\end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Look}
-\begin{itemize}
-\item To insert a final slide with the title and final thanks, use \verb|\backmatter|.
-      \begin{itemize}
-      \item The title also appears in footlines along with the author name, you can change this text with \verb|\footlinepayoff|
-      \item You can remove the title from the final slide with \verb|\backmatter[notitle]|
-      \end{itemize}
-\item The aspect ratio defaults to 16:9, and you should not change it to 4:3
-      for old projectors as it is inherently impossible to perfectly convert a 
-      16:9 presentation to 4:3 one; spacings \emph{will} break
-      \begin{itemize}
-      \item The \texttt{aspectratio} argument to the \texttt{beamer} class is
-            overridden by the SINTEF theme
-      \item If you \emph{really} know what you are doing, check the package
-            code and look for the \texttt{geometry} class.
-      \end{itemize}
-\end{itemize}
+\begin{frame}[fragile]{Redes de comunicação veicular}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.5\textwidth]{assets/can-arbitration.png}
+		\caption{CAN Arbitration}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item Múltiplos nós podem tentar transmitir simultaneamente
+		\item CAN utiliza arbitragem não destrutiva
+		\item Mensagens de maior prioridade vencem a disputa
+		\item CRC e ACK detectam falhas de transmissão
+		\item Retransmissão automática em caso de erro
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Redes de comunicação veicular}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.1\textwidth]{assets/mcp2515.jpg}
+		\caption{MCP2515}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item ECU's transmitem dados pelo barramento CAN
+		\item MCP2515 realiza o controle do protocolo
+		\item Transceptor CAN faz a interface elétrica
+		\item Microcontrolador recebe os quadros CAN
+		\item Dados são utilizados pelo sistema de telemetria
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Tecnologias de Comunicação Avaliadas}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.5\textwidth]{assets/avaliacoes.jpeg}
+		\caption{ECU}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item Tecnologias analisadas: Zigbee, Bluetooth e Wi-Fi
+		\item Critérios: alcance, taxa de transmissão e consumo energético
+		\item Necessidade de envio contínuo de dados para a internet
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Comparação das Tecnologias Sem Fio}
+
+\centering
+\renewcommand{\arraystretch}{1.4} % aumenta altura das linhas
+
+\begin{tabular}{lccc}
+\hline
+\textbf{Tecnologia} & \textbf{Alcance} & \textbf{Taxa} & \textbf{Consumo} \\
+\hline
+Bluetooth & Baixo      & Média        & Baixo \\
+Zigbee    & Médio      & Baixa        & Muito baixo \\
+LoRa      & Muito alto & Muito baixa  & Muito baixo \\
+Wi-Fi     & Alto       & Alta         & Médio \\
+\hline
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}[fragile]{Escolha da tecnologia}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.1\textwidth]{assets/wifi-logo.jpg}
+		\caption{Wi-Fi}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item Maior taxa de transmissão de dados
+		\item Comunicação direta com a internet
+		\item Ampla disponibilidade de infraestrutura
+		\item Interface Wi-Fi integrada ao ESP32
+		\item Elimina necessidade de módulos externos
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{MQTT}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.3\textwidth]{assets/mqtt.png}
+		\caption{Modelo MQTT}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item Protocolo leve para IoT e telemetria
+		\item Baseado no modelo Publish/Subscribe
+		\item Utiliza um Broker para distribuição das mensagens
+		\item Baixo consumo de recursos de rede
+		\item Alta escalabilidade e confiabilidade
+	\end{itemize}
+\end{columns}
 \end{frame}
 
 \section{Desenvolvimento do Projeto}
 
-\begin{frame}
-\frametitle{Good Luck!}
+\begin{frame}{ECU FT600}
+\begin{columns}[c]
+
+% IMAGEM
+\column{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{assets/ft600.jpg}
+
+% TEXTO
+\column{0.55\textwidth}
 \begin{itemize}
-\item Enough for an introduction! You should know enough by now
-\item If you have corrections or suggestions,
-\hrefcol{mailto:mattia.ippoliti@studenti.polito.it}{send them to me!}
+    \item ECU responsável pelo gerenciamento do motor
+    \item Controle de injeção, ignição, sensores e atuadores
+    \item Comunicação via barramento CAN e protocolo proprietário entre módulos
 \end{itemize}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}{PDM}
+\begin{columns}[c]
+
+% IMAGEM
+\column{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{assets/pdm.png}
+
+% TEXTO
+\column{0.55\textwidth}
+\begin{itemize}
+    \item Módulo eletrônico PDM responsável pela distribuição de energia do veículo
+    \item Proteção eletrônica dos sistemas e substituição de fusíveis e relés tradicionais
+    \item Comunicação via barramento CAN com os demais módulos do sistema
+\end{itemize}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Atual arquitetura}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\textwidth]{assets/sistemaicarus.png}
+		\caption{Sistema F-25}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}[fragile]{Arquitetura Telemetria}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.0\textwidth]{assets/Telemetria.png}
+		\caption{Telemetria proposta}
+	\end{figure}
+	
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Exemplo de Referência Bibliográfica}
-\begin{itemize}
-\item Estou usando aqui \cite{lofar_book_ref}
-\end{itemize}
+\begin{frame}[fragile]{Aquisição dos Dados CAN}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.1\textwidth]{assets/canPDM.png}
+		\caption{Configuração CAN}
+	\end{figure}
+	% TEXTO
+	\column{0.55\textwidth}
+	
+	\begin{itemize}
+		\item ECU e PDM transmitem dados pelo barramento CAN
+		\item MCP2515 realiza a interface com a rede CAN
+		\item Arduino processa os quadros recebidos
+		\item Dados organizados em formato JSON
+	\end{itemize}
+\end{columns}
 \end{frame}
+
+\begin{frame}[fragile]{Comunicação e Envio dos Dados}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.1\textwidth]{assets/ecu.jpg}
+		\caption{ECU}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+		
+	\begin{itemize}
+		\item Comunicação Arduino → ESP32 via UART
+		\item ESP32 conectado ao hotspot do celular
+		\item Dados enviados através do protocolo MQTT
+		\item Publicação em broker remoto
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Comunicação e Envio dos Dados}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.1\textwidth]{assets/ming.jpg}
+		\caption{ECU}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+		
+	\begin{itemize}
+		\item MQTT: recepção das mensagens
+		\item Node-RED: processamento dos fluxos
+		\item InfluxDB: armazenamento temporal
+		\item Grafana: visualização em tempo real
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Node-RED}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.4\textwidth]{assets/NODERED.png}
+		\caption{Node-RED}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+		
+	\begin{itemize}
+		\item Recebe mensagens MQTT
+		\item Processa os dados recebidos
+		\item Converte JSON para Line Protocol
+		\item Encaminha dados ao InfluxDB
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{InfluxDB}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\textwidth]{assets/bucketInflux.png}
+		\caption{InfluxDB}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+		
+	\begin{itemize}
+		\item Banco otimizado para séries temporais
+		\item Armazena dados indexados por tempo
+		\item Adequado para aplicações de telemetria
+		\item Permite análise histórica dos dados
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Grafana}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.1\textwidth]{assets/grafana.png}
+		\caption{Grafana}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+		
+	\begin{itemize}
+		\item Visualização dos dados em tempo real
+		\item Criação de dashboards interativos
+		\item Integração nativa com InfluxDB
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Resultado Final}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\textwidth]{assets/telemetria.png}
+		\caption{Telemetria}
+	\end{figure}
+	
+		
+\end{frame}
+
 
 \section{Conclusão e Trabalhos Futuros}
-\begin{frame}
-	\frametitle{Good Luck!}
-	\begin{itemize}
-		\item Enough for an introduction! You should know enough by now
-		\item If you have corrections or suggestions,
-		\hrefcol{mailto:mattia.ippoliti@studenti.polito.it}{send them to me!}
-	\end{itemize}
+\begin{frame}{Principais Resultados}
+
+\begin{itemize}
+    \item Integração da ECU e PDM através da rede CAN
+    \item Transmissão remota dos dados do veículo
+    \item Monitoramento em tempo real das variáveis
+    \item Arquitetura modular e escalável
+    \item Solução validada em testes de bancada
+\end{itemize}
+
 \end{frame}
 
-\section{Referências Bibliográficas} 
+\begin{frame}{Contribuições do Trabalho}
+
+\begin{itemize}
+    \item Integração entre eletrônica embarcada e IoT
+    \item Utilização de hardware de baixo custo
+    \item Solução baseada em ferramentas open-source
+    \item Plataforma reutilizável para futuras temporadas
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limitações Identificadas}
+
+\begin{itemize}
+    \item Dependência de hotspot Wi-Fi externo
+    \item Atualização limitada dos dashboards
+    \item Validação realizada apenas em bancada
+    \item Necessidade de testes em pista
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Trabalhos Futuros}
+
+\begin{itemize}
+    \item Integração com redes 4G/5G
+    \item Desenvolvimento de frontend dedicado
+    \item Implantação em servidor da equipe
+    \item Edge computing com Raspberry Pi
+\end{itemize}
+
+\end{frame}
+
+
+
+\section{Referências Bibliográficas}
+
 \begin{frame}[allowframebreaks]
-        \frametitle{Referências Bibliográficas} 
-        \bibliographystyle{ieeetr}
-        \bibliography{presentation_bib.bib}
+    \frametitle{Referências Bibliográficas}
+
+    \nocite{*}
+
+    \bibliographystyle{ieeetr}
+    \bibliography{presentation_bib}
+\end{frame}
+
+\begin{frame}{Agradecimentos}
+
+Agradeço ao meu orientador,
+
+\vspace{0.2cm}
+
+\textbf{Prof. Gabriel P. Silva}
+
+\vspace{0.2cm}
+
+Aos amigos do curso de Ciência da Computação,
+
+\vspace{0.3cm}
+
+À equipe \textbf{Icarus UFRJ}
+
+
 \end{frame}
 
 \backmatter
