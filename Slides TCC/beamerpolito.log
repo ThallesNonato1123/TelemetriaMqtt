@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.5.25)  7 JUN 2026 21:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.5.25)  7 JUN 2026 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1080,17 +1080,25 @@ Overfull \hbox (35.8512pt too wide) in paragraph at lines 8--9
 <assets/ft600.jpg, id=214, 1284.8pt x 962.59625pt>
 File: assets/ft600.jpg Graphic file (type jpg)
 <use assets/ft600.jpg>
-Package pdftex.def Info: assets/ft600.jpg  used on input line 519.
+Package pdftex.def Info: assets/ft600.jpg  used on input line 522.
 (pdftex.def)             Requested size: 179.24342pt x 134.29254pt.
- [25
+
+Overfull \vbox (7.98547pt too high) detected at line 522
+ []
+
+[25
 
  <./assets/ft600.jpg>]
 <assets/pdm.png, id=221, 459.96844pt x 419.31656pt>
 File: assets/pdm.png Graphic file (type png)
 <use assets/pdm.png>
-Package pdftex.def Info: assets/pdm.png  used on input line 538.
+Package pdftex.def Info: assets/pdm.png  used on input line 544.
 (pdftex.def)             Requested size: 156.05031pt x 142.25862pt.
- [26
+
+Overfull \vbox (15.95155pt too high) detected at line 544
+ []
+
+[26
 
  <./assets/pdm.png (PNG copy)>]
 \openout4 = `beamerpolito.vrb'.
@@ -1102,7 +1110,7 @@ File: assets/sistemaicarus.png Graphic file (type png)
 Package pdftex.def Info: assets/sistemaicarus.png  used on input line 5.
 (pdftex.def)             Requested size: 318.67209pt x 163.69633pt.
 )
-Overfull \vbox (36.0639pt too high) detected at line 548
+Overfull \vbox (36.0639pt too high) detected at line 554
  []
 
 [27
@@ -1117,7 +1125,7 @@ File: assets/Telemetria.png Graphic file (type png)
 Package pdftex.def Info: assets/Telemetria.png  used on input line 5.
 (pdftex.def)             Requested size: 398.3386pt x 149.25665pt.
 )
-Overfull \vbox (21.62422pt too high) detected at line 558
+Overfull \vbox (21.62422pt too high) detected at line 564
  []
 
 [28
@@ -1139,7 +1147,7 @@ Overfull \hbox (11.951pt too wide) in paragraph at lines 8--9
  []
 
 )
-Overfull \vbox (1.80693pt too high) detected at line 601
+Overfull \vbox (1.80693pt too high) detected at line 607
  []
 
 [30
@@ -1170,19 +1178,19 @@ File: assets/codigo.png Graphic file (type png)
 Package pdftex.def Info: assets/codigo.png  used on input line 10.
 (pdftex.def)             Requested size: 114.72165pt x 145.5766pt.
 )
-Overfull \vbox (26.31555pt too high) detected at line 652
+Overfull \vbox (26.31555pt too high) detected at line 658
  []
 
 [32
 
  <./assets/codigo.png>]
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 674.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 674.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 680.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 680.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 674.
+(Font)              for symbol `textbraceleft' on input line 680.
 
 [33
 
@@ -1255,7 +1263,7 @@ File: assets/bucketInflux.png Graphic file (type png)
 Package pdftex.def Info: assets/bucketInflux.png  used on input line 8.
 (pdftex.def)             Requested size: 95.60258pt x 129.78644pt.
 )
-Overfull \vbox (4.154pt too high) detected at line 794
+Overfull \vbox (4.154pt too high) detected at line 800
  []
 
 [38
@@ -1275,7 +1283,7 @@ Overfull \hbox (11.951pt too wide) in paragraph at lines 8--9
  []
 
 )
-Overfull \vbox (19.41145pt too high) detected at line 816
+Overfull \vbox (19.41145pt too high) detected at line 822
  []
 
 [39
@@ -1290,7 +1298,7 @@ File: assets/telemetria.png Graphic file (type png)
 Package pdftex.def Info: assets/telemetria.png  used on input line 5.
 (pdftex.def)             Requested size: 239.00558pt x 143.48949pt.
 )
-Overfull \vbox (15.85706pt too high) detected at line 827
+Overfull \vbox (15.85706pt too high) detected at line 833
  []
 
 [40
@@ -1319,9 +1327,9 @@ Overfull \vbox (15.85706pt too high) detected at line 827
 
 ]
 LaTeX Font Info:    Font shape `OT1/Crlt-OsF/m/sl' in size <14.4> not available
-(Font)              Font shape `OT1/Crlt-OsF/m/it' tried instead on input line 909.
+(Font)              Font shape `OT1/Crlt-OsF/m/it' tried instead on input line 915.
 LaTeX Font Info:    Font shape `OT1/Crlt-OsF/m/sl' in size <10> not available
-(Font)              Font shape `OT1/Crlt-OsF/m/it' tried instead on input line 909.
+(Font)              Font shape `OT1/Crlt-OsF/m/it' tried instead on input line 915.
  [51
 
 ]
@@ -1350,7 +1358,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  128i,13n,122p,480b,782s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/huerta/caladea/Caladea-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/huerta/caladea/Caladea-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/google/carlito/Crlt-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/google/carlito/Crlt-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/google/carlito/Crlt-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on beamerpolito.pdf (51 pages, 3248329 bytes).
+Output written on beamerpolito.pdf (51 pages, 3248053 bytes).
 PDF statistics:
  483 PDF objects out of 1000 (max. 8388607)
  349 compressed objects within 4 object streams

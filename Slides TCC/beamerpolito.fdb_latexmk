@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex beamerpolito"] 1780878450.58332 "beamerpolito.aux" "beamerpolito.bbl" "beamerpolito" 1780878452.47525 0
+["bibtex beamerpolito"] 0 "beamerpolito.aux" "beamerpolito.bbl" "beamerpolito" 1780879464.68786 -1
   "./presentation_bib.bib" 1780337162.90758 4618 083128007a823fdd55a9e348bc43fc90 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/ieeetr.bst" 1775001600 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "beamerpolito.aux" 1780878452.30566 9743 b39691c70903d61a46ccc0d654eab189 "pdflatex"
+  "beamerpolito.aux" 1780879464.53573 9743 b39691c70903d61a46ccc0d654eab189 "pdflatex"
   (generated)
   "beamerpolito.bbl"
   "beamerpolito.blg"
   (rewritten before read)
-["pdflatex"] 1780878450.61594 "/home/thallesnonato/Desktop/TelemetriaMqtt/Slides TCC/beamerpolito.tex" "beamerpolito.pdf" "beamerpolito" 1780878452.47538 0
-  "/home/thallesnonato/Desktop/TelemetriaMqtt/Slides TCC/beamerpolito.tex" 1780878448.38719 21917 6b304b8368edc7e9b103064f5727540d ""
+["pdflatex"] 1780879462.88586 "/home/thallesnonato/Desktop/TelemetriaMqtt/Slides TCC/beamerpolito.tex" "beamerpolito.pdf" "beamerpolito" 1780879464.68805 0
+  "/home/thallesnonato/Desktop/TelemetriaMqtt/Slides TCC/beamerpolito.tex" 1780879462.69592 22087 ee2d18dc19076fd58c8d04664423490f ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/caladea/cld_prieif.enc" 1408564761 2909 0d9a00ce3f1df725b182b15dd24bf4a5 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_j4hweq.enc" 1664999222 3199 785d1f4f03ee0bb70108af8679871db0 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_zisnlb.enc" 1664999222 3105 fe84215d6e1e68b95a7d9a8041ee418c ""
@@ -268,13 +268,13 @@
   "assets/telemetria.png" 1780450914.29206 56762 f26f09f8bd74287e17161b9c0f1d02c7 ""
   "assets/transformtoinflux.png" 1780878374.50603 18885 557d5d49ddb90ec40c3d704d92124ebf ""
   "assets/wifi-logo.jpg" 1780439653.61882 22860 0f23e213420b8904a3a29c3d58c142c4 ""
-  "beamerpolito.aux" 1780878452.30566 9743 b39691c70903d61a46ccc0d654eab189 "pdflatex"
+  "beamerpolito.aux" 1780879464.53573 9743 b39691c70903d61a46ccc0d654eab189 "pdflatex"
   "beamerpolito.bbl" 1780878450.61013 1999 03361bb2d479ab7a87c647dd431eb475 "bibtex beamerpolito"
-  "beamerpolito.nav" 1780878452.30663 5797 b32778ea90f2c1ca042ea15db92f1228 "pdflatex"
-  "beamerpolito.out" 1780878452.30592 787 4099acc70089d46b00c938d913b63f54 "pdflatex"
-  "beamerpolito.tex" 1780878448.38719 21917 6b304b8368edc7e9b103064f5727540d ""
-  "beamerpolito.toc" 1780878452.30663 297 70f45edaef4a4fbc476f3a3e45e702f5 "pdflatex"
-  "beamerpolito.vrb" 1780878452.14319 164 31d06ab37da8f8cc180c4f31b0cebec3 "pdflatex"
+  "beamerpolito.nav" 1780879464.53673 5797 b32778ea90f2c1ca042ea15db92f1228 "pdflatex"
+  "beamerpolito.out" 1780879464.53581 787 4099acc70089d46b00c938d913b63f54 "pdflatex"
+  "beamerpolito.tex" 1780879462.69592 22087 ee2d18dc19076fd58c8d04664423490f ""
+  "beamerpolito.toc" 1780879464.53673 297 70f45edaef4a4fbc476f3a3e45e702f5 "pdflatex"
+  "beamerpolito.vrb" 1780879464.37787 164 31d06ab37da8f8cc180c4f31b0cebec3 "pdflatex"
   "beamerthemesintef.sty" 1780878374.516 9709 f00e5032776693473c47ce71ff070439 ""
   "sintefcolor.sty" 1779742780.9338 988 0d0eeaf91f7e5cb659a99ca8306bec89 ""
   (generated)
