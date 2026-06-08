@@ -1,9 +1,9 @@
 \frametitle{Resultado Final}
 
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.6\textwidth]{assets/telemetria.png}
-		\caption{Telemetria}
-	\end{figure}
-	
-		
+^^I\begin{figure}
+^^I^^I\centering
+^^I^^I\includegraphics[width=0.6\textwidth]{assets/telemetria.png}
+^^I^^I\caption{Telemetria}
+^^I\end{figure}
+^^I
+^^I^^I

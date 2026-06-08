@@ -557,8 +557,29 @@ Wi-Fi     & Alto       & Alta         & Médio \\
 	
 \end{frame}
 
+\begin{frame}{Parâmetros Monitorados}
 
-\begin{frame}[fragile]{Aquisição dos Dados CAN}
+\centering
+
+\begin{tabular}{|c|p{7cm}|}
+\hline
+\textbf{Parâmetro} & \textbf{Descrição} \\
+\hline
+RPM & Rotação instantânea do motor. \\
+\hline
+MAP & Pressão absoluta no coletor de admissão, indicando a carga do motor. \\
+\hline
+Lambda & Relação ar-combustível utilizada para análise da combustão. \\
+\hline
+CLT & Temperatura do líquido de arrefecimento do motor. \\
+\hline
+Bateria & Tensão do sistema elétrico do veículo. \\
+\hline
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}[fragile]{Aquisição dos Dados entre PDM e ECU}
 	\begin{columns}[c]
 	
 	% IMAGEM
@@ -572,36 +593,114 @@ Wi-Fi     & Alto       & Alta         & Médio \\
 	\column{0.55\textwidth}
 	
 	\begin{itemize}
-		\item ECU e PDM transmitem dados pelo barramento CAN
-		\item MCP2515 realiza a interface com a rede CAN
+		\item PDM configurado para receber os dados da ECU
+		\item Dispositivos sobre o mesmo endianess
 		\item Arduino processa os quadros recebidos
-		\item Dados organizados em formato JSON
 	\end{itemize}
 \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Comunicação e Envio dos Dados}
+\begin{frame}[fragile]{Envio dos Dados PDM - Microcontrolador}
 	\begin{columns}[c]
 	
 	% IMAGEM
 	\column{0.3\textwidth}
 	\begin{figure}
 		\centering
-		\includegraphics[width=1.1\textwidth]{assets/ecu.jpg}
-		\caption{ECU}
+		\includegraphics[width=1.1\textwidth]{assets/can_output_pdm.png}
+		\caption{Configuração CAN}
 	\end{figure}
-	
 	% TEXTO
 	\column{0.55\textwidth}
-		
+	
 	\begin{itemize}
-		\item Comunicação Arduino → ESP32 via UART
-		\item ESP32 conectado ao hotspot do celular
-		\item Dados enviados através do protocolo MQTT
-		\item Publicação em broker remoto
+		\item Configurações dos ID's de cada saída do carro
+		\item Número de bytes disponivel para cada saída 
+		\item Frequencia para envio de cada dado
 	\end{itemize}
 \end{columns}
 \end{frame}
+
+\begin{frame}[fragile]{Processamento das Mensagens CAN}
+
+\begin{columns}[T]
+
+% CÓDIGO
+\column{0.48\textwidth}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{assets/codigo.png}
+\caption{Configuração CAN}
+\end{figure}
+
+% TEXTO
+\column{0.48\textwidth}
+
+\begin{itemize}
+\item CAN configurado em 500 kbps
+\item Recepção de quadros através do MCP2515
+\item Identificação dos sinais por ID CAN
+\item Conversão dos bytes para valores físicos
+\item Atualização das variáveis monitoradas
+\item Preparação dos dados para envio em JSON
+\end{itemize}
+
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Estrutura da Mensagem JSON}
+
+\centering
+
+\fbox{
+\parbox{0.75\textwidth}{
+\centering
+\texttt{\{"rpm":4500, "bateria":13.8, "map":98.4,}\\
+\texttt{"lambda":0.98, "clt":87.5\}}
+}
+}
+
+\vspace{0.8cm}
+
+\begin{itemize}
+\item Dados provenientes da ECU/PDM via CAN
+\item Estrutura padronizada para transmissão
+\item Publicação posterior via MQTT
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Envio ESP32 para Broker MQTT}
+
+\begin{columns}[T]
+
+% CÓDIGO
+\column{0.48\textwidth}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{assets/codigoesp.png}
+\caption{Codigo ESP}
+\end{figure}
+
+% TEXTO
+\column{0.48\textwidth}
+
+\begin{itemize}
+\item Recepção dos dados processados pelo Arduino via UART
+\item Conexão à internet utilizando hotspot do celular
+\item Publicação dos dados através do protocolo MQTT
+\item Utilização do broker público HiveMQ Cloud
+\end{itemize}
+
+
+\end{columns}
+
+\end{frame}
+
 
 \begin{frame}[fragile]{Comunicação e Envio dos Dados}
 	\begin{columns}[c]
@@ -645,6 +744,28 @@ Wi-Fi     & Alto       & Alta         & Médio \\
 		\item Processa os dados recebidos
 		\item Converte JSON para Line Protocol
 		\item Encaminha dados ao InfluxDB
+	\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Node-RED}
+	\begin{columns}[c]
+	
+	% IMAGEM
+	\column{0.3\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.4\textwidth]{assets/transformtoinflux.png}
+		\caption{JSON -> Line Protocol}
+	\end{figure}
+	
+	% TEXTO
+	\column{0.55\textwidth}
+		
+	\begin{itemize}
+		\item Executado em um nó Function do Node-RED
+		\item Seleciona os parâmetros utilizados na análise
+		\item Estrutura compatível com o nó InfluxDB
 	\end{itemize}
 \end{columns}
 \end{frame}
